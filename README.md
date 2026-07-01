@@ -1,8 +1,13 @@
-# Marketing Campaign Data Cleaning
+# 📊 Marketing Campaign Data Cleaning using Python & Pandas
 
-Cleaning and validating a messy marketing campaign dataset using Python and Pandas — turning inconsistent, error-filled raw data into an analysis-ready dataset.
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Cleaning-green)
+![NumPy](https://img.shields.io/badge/NumPy-Analysis-orange)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-red)
 
-## Problem
+Transforming messy marketing campaign data into a clean, analysis-ready dataset through a structured data cleaning pipeline.
+
+## 1. Problem
 
 The raw dataset (2,020 rows, 12 columns) simulated common real-world data quality issues:
 
@@ -15,7 +20,11 @@ The raw dataset (2,020 rows, 12 columns) simulated common real-world data qualit
 - A logically invalid extra column (`Clicks2`) with 1,980 missing values
 - Extreme outliers in campaign spend
 
-## Approach
+## 2. Tools
+
+Python, Pandas, NumPy, Jupyter Notebook
+
+## 3. Approach
 
 Each cleaning step was validated with a before/after check rather than assumed to have worked, and every fix followed an explicit rule rather than a blanket drop or fill.
 
@@ -32,7 +41,7 @@ Each cleaning step was validated with a before/after check rather than assumed t
 9. **Outlier handling** — capped extreme `spend` values above the IQR upper bound (3×IQR, to preserve legitimate high spenders while correcting clear data errors)
 10. **Final validation report** — confirmed 0 missing values and 0 duplicate rows before export
 
-## Result
+## 4. Result
 
 | Metric | Before | After |
 |---|---|---|
@@ -42,10 +51,6 @@ Each cleaning step was validated with a before/after check rather than assumed t
 | Inconsistent channel labels | 11 unique | 6 unique |
 
 The cleaned dataset is exported to `data/cleaned/marketing_campaign_cleaned.csv`, ready for analysis or dashboarding (e.g. Power BI, Tableau).
-
-## Tools
-
-Python, Pandas, NumPy, Jupyter Notebook
 
 
 ## Author
